@@ -54,3 +54,8 @@ python localcelBuilder.py
 
 **4. Locate your executable:**
 Once complete, your portable application will be located in the `dist/` folder as `Localcel.exe`.
+
+
+---
+
+![Windows 11 Acrylic UI](Screenshot.png)
