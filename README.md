@@ -35,7 +35,7 @@ Ensure you have Python 3 installed.
 
 **1. Clone the repository:**
 ```bash
-git clone https://github.com/edwinjosephshiju/localcel.git
+git clone https://github.com/edwinjosephshiju/Localcel.git
 cd localcel
 ```
 
