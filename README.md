@@ -8,7 +8,10 @@
 * **Tiny Footprint (~5MB):** Uses a custom "Dropper" architecture. It doesn't bundle massive UI libraries; instead, it leverages the host machine's resources.
 * **Auto-Setup:** Missing Python? Missing PyQt6? Localcel automatically detects missing dependencies, prompts you, and safely installs them in the background via `winget` and `pip`.
 * **Deep Windows 11 Integration:** Features native Acrylic/TranslucentTB blur effects and system tray background execution.
-* **1-Click Tunnels:** Instantly map local ports to live `https://` URLs using built-in Cloudflare integration.
+* **1-Click Tunnels (Cloudflare Integration):** Instantly map local ports to live `https://` URLs. Behind the scenes, Localcel uses a robust `CloudflareHelper` module that:
+  * **Auto-Installs Cloudflared:** If the `cloudflared` CLI is missing on Windows, Localcel automatically installs it via `winget`.
+  * **Quick Tunnels:** Parses `cloudflared` background process logs to instantly expose ephemeral `trycloudflare.com` URLs for rapid testing.
+  * **Persistent Named Tunnels:** Authenticates with your Cloudflare account to create and manage persistent Named Tunnels. It configures DNS routing and auto-generates proxy configurations (`tunnel.yml`) synced securely with your `~/.cloudflared` credentials.
 
 ---
 
