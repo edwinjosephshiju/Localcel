@@ -7,7 +7,7 @@
 ## ✨ Features (v1.1)
 * **GitHub Pages Integration (New):** Deploy any local folder to GitHub Pages with one click. Localcel handles repository creation, Git initialization, and DNS configuration via the GitHub CLI.
 * **Smart Tunneling:** Supports both ephemeral Cloudflare TryCloudflare URLs and persistent **Named Tunnels** with custom domains.
-* **Tiny Footprint (~5MB):** Uses a advanced "Dropper" architecture. It doesn't bundle massive UI libraries; instead, it leverages the host machine's Python and PyQt6 environment.
+* **Tiny Footprint (~9MB):** Uses a advanced "Dropper" architecture. It doesn't bundle massive UI libraries; instead, it leverages the host machine's Python and PyQt6 environment.
 * **Auto-Dependency Management:** Missing Python or libraries? Localcel automatically detects, prompts, and installs them via `winget` and `pip` during first-run.
 * **Intelligent Port Checker:** No more port collisions! If a port is in use, Localcel prompts you to choose a new free port before starting.
 * **Native Windows 11 Aesthetics:** Features native Mica/Acrylic effects and System Tray background mode for persistent hosting.
