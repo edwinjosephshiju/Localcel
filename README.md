@@ -1,17 +1,16 @@
 # Localcel ⚡
 
-**A portable, Vercel-like environment for localhost.** Localcel provides a beautiful, native Windows 11 GUI to manage local Node.js servers and instantly expose them to the internet using Cloudflare Tunnels. 
+**A portable, Vercel-like environment for localhost.** Localcel provides a beautiful, native Windows 11 GUI to manage local Node.js servers and instantly expose them to the internet using Cloudflare Tunnels—now with built-in **GitHub Pages** deployment!
 
 ![Windows 11 Acrylic UI](localcel_full.png)
 
-## ✨ Features
-* **Tiny Footprint (~5MB):** Uses a custom "Dropper" architecture. It doesn't bundle massive UI libraries; instead, it leverages the host machine's resources.
-* **Auto-Setup:** Missing Python? Missing PyQt6? Localcel automatically detects missing dependencies, prompts you, and safely installs them in the background via `winget` and `pip`.
-* **Deep Windows 11 Integration:** Features native Acrylic/TranslucentTB blur effects and system tray background execution.
-* **1-Click Tunnels (Cloudflare Integration):** Instantly map local ports to live `https://` URLs. Behind the scenes, Localcel uses a robust `CloudflareHelper` module that:
-  * **Auto-Installs Cloudflared:** If the `cloudflared` CLI is missing on Windows, Localcel automatically installs it via `winget`.
-  * **Quick Tunnels:** Parses `cloudflared` background process logs to instantly expose ephemeral `trycloudflare.com` URLs for rapid testing.
-  * **Persistent Named Tunnels:** Authenticates with your Cloudflare account to create and manage persistent Named Tunnels. It configures DNS routing and auto-generates proxy configurations (`tunnel.yml`) synced securely with your `~/.cloudflared` credentials.
+## ✨ Features (v1.1)
+* **GitHub Pages Integration (New):** Deploy any local folder to GitHub Pages with one click. Localcel handles repository creation, Git initialization, and DNS configuration via the GitHub CLI.
+* **Smart Tunneling:** Supports both ephemeral Cloudflare TryCloudflare URLs and persistent **Named Tunnels** with custom domains.
+* **Tiny Footprint (~5MB):** Uses a advanced "Dropper" architecture. It doesn't bundle massive UI libraries; instead, it leverages the host machine's Python and PyQt6 environment.
+* **Auto-Dependency Management:** Missing Python or libraries? Localcel automatically detects, prompts, and installs them via `winget` and `pip` during first-run.
+* **Intelligent Port Checker:** No more port collisions! If a port is in use, Localcel prompts you to choose a new free port before starting.
+* **Native Windows 11 Aesthetics:** Features native Mica/Acrylic effects and System Tray background mode for persistent hosting.
 
 ---
 
