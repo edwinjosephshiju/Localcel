@@ -1,3 +1,3 @@
 @echo off
-dotnet "%~dp0dist\Localcel_WinUI3.dll"
+dotnet "%~dp0dist\Localcel.dll"
 if errorlevel 1 pause

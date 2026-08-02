@@ -1,11 +1,11 @@
 <Window
-    x:Class="Localcel_WinUI3.MainWindow"
+    x:Class="Localcel.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:tb="using:H.NotifyIcon"
-    xmlns:models="using:Localcel_WinUI3.Models"
+    xmlns:models="using:Localcel.Models"
     mc:Ignorable="d"
     Title="Localcel - Vercel for Localhost">
 

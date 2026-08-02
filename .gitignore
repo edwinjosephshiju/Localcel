@@ -2,16 +2,21 @@
 [Bb]in/
 [Oo]bj/
 [Dd]ist/
+dist_single/
 .vs/
 *.user
 *.suo
 *.userosv
 *.sln.docstates
 
-# OS & Temporary files
+# Executables and release archives
+Localcel.exe
+*.zip
+*.log
+
+# OS temporary files
 .DS_Store
 Thumbs.db
-*.log
 
 # Legacy python file
 localcel.py

@@ -1,8 +1,8 @@
-using Localcel_WinUI3.Models;
+using Localcel.Models;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
-namespace Localcel_WinUI3.Dialogs
+namespace Localcel.Dialogs
 {
     public sealed partial class EditAppDialog : ContentDialog
     {

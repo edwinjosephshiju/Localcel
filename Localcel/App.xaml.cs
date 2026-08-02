@@ -19,7 +19,7 @@ using Windows.Foundation.Collections;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace Localcel_WinUI3
+namespace Localcel
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -34,6 +34,7 @@ namespace Localcel_WinUI3
         /// </summary>
         public App()
         {
+            Environment.SetEnvironmentVariable("MICROSOFT_WINDOWSAPPRUNTIME_BASE_DIRECTORY", AppContext.BaseDirectory);
             this.UnhandledException += (sender, e) =>
             {
                 try

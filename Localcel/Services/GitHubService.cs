@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Localcel_WinUI3.Models;
+using Localcel.Models;
 
-namespace Localcel_WinUI3.Services
+namespace Localcel.Services
 {
     public static class GitHubService
     {

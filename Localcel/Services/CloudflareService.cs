@@ -5,9 +5,9 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using Localcel_WinUI3.Models;
+using Localcel.Models;
 
-namespace Localcel_WinUI3.Services
+namespace Localcel.Services
 {
     public class CloudflareTunnelInfo
     {

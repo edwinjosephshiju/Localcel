@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Localcel_WinUI3.Models
+namespace Localcel.Models
 {
     public class AppConfig
     {

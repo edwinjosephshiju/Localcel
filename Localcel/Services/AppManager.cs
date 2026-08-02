@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 
-namespace Localcel_WinUI3.Models;
+namespace Localcel.Models;
 
 public static class AppManager
 {

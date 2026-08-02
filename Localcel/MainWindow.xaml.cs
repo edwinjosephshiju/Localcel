@@ -5,9 +5,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Localcel_WinUI3.Dialogs;
-using Localcel_WinUI3.Models;
-using Localcel_WinUI3.Services;
+using Localcel.Dialogs;
+using Localcel.Models;
+using Localcel.Services;
 using Microsoft.UI.Composition.SystemBackdrops;
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
@@ -16,7 +16,7 @@ using Microsoft.UI.Xaml.Media;
 using Windows.Storage.Pickers;
 using WinRT.Interop;
 
-namespace Localcel_WinUI3
+namespace Localcel
 {
     public sealed partial class MainWindow : Window
     {

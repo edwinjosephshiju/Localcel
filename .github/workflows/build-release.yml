@@ -19,19 +19,23 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Publish WinUI 3 Standalone Application
+    - name: Publish WinUI 3 Standalone Single-File Executable
       run: |
-        dotnet publish Localcel_WinUI3/Localcel_WinUI3.csproj -c Release -r win-x64 -o dist -p:WindowsPackageType=None
+        dotnet publish Localcel/Localcel.csproj -c Release -r win-x64 -o dist_single -p:WindowsPackageType=None -p:PublishSingleFile=true -p:SelfContained=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true
 
-    - name: Rename Executable & Package Zip
+    - name: Publish WinUI 3 Unpackaged Folder
       run: |
-        if (Test-Path dist\Localcel_WinUI3.exe) {
-            Move-Item dist\Localcel_WinUI3.exe dist\Localcel.exe -Force
-        }
+        dotnet publish Localcel/Localcel.csproj -c Release -r win-x64 -o dist -p:WindowsPackageType=None
+
+    - name: Prepare Release Artifacts
+      run: |
+        Move-Item dist_single\Localcel.exe Localcel.exe -Force
         Compress-Archive -Path dist\* -DestinationPath Localcel_v1.1_win-x64.zip -Force
 
-    - name: Upload Build Artifact
+    - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: Localcel-Standalone-win-x64
-        path: Localcel_v1.1_win-x64.zip
+        name: Localcel-Release-Files
+        path: |
+          Localcel.exe
+          Localcel_v1.1_win-x64.zip

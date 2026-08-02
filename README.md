@@ -47,12 +47,12 @@ Download the latest release executable from the **[Releases Page](https://github
 
 2. Build & publish the standalone executable:
    ```powershell
-   dotnet publish Localcel_WinUI3/Localcel_WinUI3.csproj -c Release -r win-x64 -o dist -p:WindowsPackageType=None
+   dotnet publish Localcel/Localcel.csproj -c Release -r win-x64 -o dist -p:WindowsPackageType=None
    ```
 
 3. Run the application from the output directory:
    ```powershell
-   .\dist\Localcel_WinUI3.exe
+   .\dist\Localcel.exe
    ```
 
 ---

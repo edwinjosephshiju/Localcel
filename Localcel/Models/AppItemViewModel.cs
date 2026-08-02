@@ -2,7 +2,7 @@ using System.ComponentModel;
 using Microsoft.UI.Xaml.Media;
 using Windows.UI;
 
-namespace Localcel_WinUI3.Models
+namespace Localcel.Models
 {
     public class AppItemViewModel : INotifyPropertyChanged
     {

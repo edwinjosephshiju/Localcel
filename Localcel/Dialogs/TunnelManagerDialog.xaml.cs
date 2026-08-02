@@ -1,10 +1,10 @@
 using System;
 using System.Threading.Tasks;
-using Localcel_WinUI3.Services;
+using Localcel.Services;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
-namespace Localcel_WinUI3.Dialogs
+namespace Localcel.Dialogs
 {
     public sealed partial class TunnelManagerDialog : ContentDialog
     {

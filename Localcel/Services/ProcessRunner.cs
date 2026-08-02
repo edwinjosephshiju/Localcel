@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.UI.Dispatching;
 
-namespace Localcel_WinUI3.Services
+namespace Localcel.Services
 {
     public class ManagedProcess
     {
