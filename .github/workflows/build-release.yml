@@ -1,0 +1,37 @@
+name: Build and Release Localcel (WinUI 3)
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET 8 SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Publish WinUI 3 Standalone Application
+      run: |
+        dotnet publish Localcel_WinUI3/Localcel_WinUI3.csproj -c Release -r win-x64 -o dist -p:WindowsPackageType=None
+
+    - name: Rename Executable & Package Zip
+      run: |
+        if (Test-Path dist\Localcel_WinUI3.exe) {
+            Move-Item dist\Localcel_WinUI3.exe dist\Localcel.exe -Force
+        }
+        Compress-Archive -Path dist\* -DestinationPath Localcel_v1.1_win-x64.zip -Force
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Localcel-Standalone-win-x64
+        path: Localcel_v1.1_win-x64.zip

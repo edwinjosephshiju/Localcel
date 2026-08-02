@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Localcel_WinUI3 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Localcel_WinUI3 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

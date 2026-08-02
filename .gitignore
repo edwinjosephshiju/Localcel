@@ -1,0 +1,17 @@
+# Visual Studio / .NET / WinUI 3 build outputs
+[Bb]in/
+[Oo]bj/
+[Dd]ist/
+.vs/
+*.user
+*.suo
+*.userosv
+*.sln.docstates
+
+# OS & Temporary files
+.DS_Store
+Thumbs.db
+*.log
+
+# Legacy python file
+localcel.py

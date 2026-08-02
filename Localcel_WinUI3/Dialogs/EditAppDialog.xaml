@@ -1,0 +1,34 @@
+<ContentDialog
+    x:Class="Localcel_WinUI3.Dialogs.EditAppDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Edit Application"
+    PrimaryButtonText="Save Changes"
+    CloseButtonText="Cancel"
+    DefaultButton="Primary"
+    CornerRadius="8"
+    PrimaryButtonStyle="{StaticResource DialogPrimaryButtonStyle}"
+    CloseButtonStyle="{StaticResource DialogDefaultButtonStyle}"
+    PrimaryButtonClick="EditAppDialog_PrimaryButtonClick">
+
+    <StackPanel Spacing="12" Width="360" Margin="0,8,0,0">
+        <TextBlock x:Name="LblPortHeader" Text="Port Number" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+        <TextBox x:Name="TxtPort" PlaceholderText="e.g. 3000"/>
+
+        <StackPanel x:Name="PanelStaticOptions" Spacing="12" Visibility="Collapsed">
+            <TextBlock Text="Hosting Type" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+            <ComboBox x:Name="ComboAppType" HorizontalAlignment="Stretch" SelectionChanged="ComboAppType_SelectionChanged">
+                <ComboBoxItem Content="Static Page (GitHub Pages)" Tag="static_gh"/>
+                <ComboBoxItem Content="Static Page (Cloudflare Tunnel)" Tag="static_cf"/>
+            </ComboBox>
+        </StackPanel>
+
+        <TextBlock x:Name="LblDomainHeader" Text="Custom Domain (Optional)" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+        <TextBox x:Name="TxtDomain" PlaceholderText="e.g. app.mycustomdomain.com"/>
+
+        <TextBlock x:Name="TxtError" Foreground="{ThemeResource SystemFillColorCriticalBrush}" Visibility="Collapsed" TextWrapping="Wrap"/>
+    </StackPanel>
+</ContentDialog>
